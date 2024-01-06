@@ -1,0 +1,201 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.body {
+  background-color: black;
+  width: auto;
+  min-height: 100vh;
+}
+.contact {
+  background-color: black;
+  width: auto;
+  height: 100vh;
+}
+#videoBG {
+  position: absolute;
+  z-index: -1;
+}
+
+/* ---------------------------------------FOOTER------------------------------ */
+.footer {
+  display: flex;
+  padding: 30px;
+  background-color: rgba(59, 56, 50, 0.875);
+  gap: 10px;
+}
+.footer-trailer {
+  display: flex;
+  flex: 0.4;
+}
+.footer-contact {
+  /* display: flex; */
+  flex: 0.6;
+  justify-content: space-evenly;
+}
+.follow-app {
+  display: flex;
+  align-items: center;
+}
+.follow {
+  display: flex;
+  flex-direction: column;
+  /* gap: 20px; */
+}
+.links {
+  display: flex;
+  gap: 50px;
+}
+/*--------------------------- Carasol---------------- */
+.carasol {
+  margin: auto;
+  width: 95%;
+}
+.slider {
+  padding: 30px;
+}
+.slider-img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.about-page-img {
+  height: 200px;
+  width: 300px;
+  border-radius: 10px;
+}
+/*------------------------------ MERCH PAGE---------------------- */
+.merch {
+  display: flex;
+  align-items: center;
+}
+.merch-img {
+  flex: 0.4;
+  padding: 20px;
+  object-fit: contain;
+}
+.merch-text {
+  flex: 0.6;
+  color: white;
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #ffd38c;
+  border-radius: 10px;
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #ffd38c;
+  border-radius: 10px;
+}
+
+.eventImg {
+  max-width: 90vw;
+}
+@media (min-aspect-ratio: 16/9) {
+  #videoBG {
+    width: 100%;
+    height: auto;
+  }
+}
+@media (max-width: 767px) {
+  #videoBG {
+    display: none;
+  }
+  body {
+    background-size: cover;
+    /* width: 70%; */
+  }
+}
+@media (max-width: 767px) {
+  #eventz {
+    width: 100%;
+    /* padding:0px 60px; */
+    justify-content: center;
+  }
+  .eventImg {
+    width: 300px;
+  }
+}
+
+@media (width<= 400px) {
+  .about-page-img {
+    margin-left: -20px;
+    width: 250px;
+  }
+  .team {
+    justify-content: center;
+  }
+}
+@media (width<= 1024px) {
+  .team {
+    justify-content: center;
+  }
+  .footer-trailer {
+    display: none;
+  }
+  .footer-contact {
+    flex: 1;
+    justify-content: space-evenly;
+  }
+}
+@media (max-width: 767px) {
+  #videoBG {
+    width: 100%;
+    position: absolute;
+  }
+  #title {
+    position: absolute;
+    width: 80%;
+    top: 230px;
+  }
+  #eventz {
+    width: 100%;
+    /* padding:0px 60px; */
+    justify-content: center;
+  }
+}
+
+.embrasser {
+  background: linear-gradient(124.76deg, #f5e4ca 12.61%, #dbba89 63.66%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
