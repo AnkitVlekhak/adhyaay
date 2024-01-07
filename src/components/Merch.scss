@@ -1,0 +1,28 @@
+.mine {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+  
+  .t-box {
+    margin-top: 150px;
+    display: flex;
+    align-items: normal;
+    justify-content: space-around;
+    width: 90vw;
+    margin-bottom: 100px;
+    flex-direction: row;
+  }
+  
+  @media only screen and (max-width: 40rem) {
+    .t-box {
+      flex-direction: column;
+      align-items: center;
+      margin-left: 5px;
+      margin-right: 5px;
+      
+      
+    }
+  }
+  
