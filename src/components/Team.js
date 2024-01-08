@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import Carousel from "./Carousel";
 import { Developers, heads, ofc, og } from "./TeamAdhyaay";
-
+import style from "../Styles/team.module.css";
 
 const Team = () => {
 
@@ -68,7 +68,7 @@ const Team = () => {
           </div>
         </div>
       </div>
-      <div style={{ width: display? "75%" : "100%", height: "100vh", overflow: "hidden", overflowY: "scroll", }} ref={secondDivRef}>
+      <div className={style.left} style={{ width: display? "75%" : "100%", height: "100vh", overflow: "hidden", overflowY: "scroll",}} ref={secondDivRef}>
         <div style={{ backgroundColor: "black", minHeight: "100vh"}}>
           <p
             style={{
