@@ -1,10 +1,11 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Carousel from "./Carousel";
 import { Developers, heads, ofc, og } from "./TeamAdhyaay";
 
 
 const Team = () => {
 
+  const [display, setDisplay] = useState(window.innerWidth > 768);
   const [sel, setSel] = useState("SECRETARIES");
   const secondDivRef = useRef(null);
   const handleItemClick = (selectedItem) => {
@@ -22,10 +23,23 @@ const Team = () => {
     }
   };
 
+  useEffect(() => {
+    const handleResize = () => {
+      setDisplay(window.innerWidth > 768);
+    };
+
+    // Add event listener to handle window resize
+    window.addEventListener("resize", handleResize);
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   return (
-    <div style={{ width: "100%", height: "100vh", display: "flex", backgroundColor: "black" }}>
-      <div style={{ width: "30%", height: "60%", backgroundColor: "black", display: "flex", alignItems: "center", justifyContent: "center", borderRight: "1px solid #ffd38c", marginTop: "10vw" }}>
+    <div style={{ width: "100%", height: "100vh", display: "flex", backgroundColor: "black", }}>
+      <div style={{ width: "30%", height: "60%", backgroundColor: "black", alignItems: "center", justifyContent: "center", borderRight: "1px solid #ffd38c", marginTop: "10vw", display: display ? "flex" : "none" }}>
         <div style={{ width: '100%', height: '80%', display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: "5vw", }}>
           <div style={{ width: '95%', height: '60%', paddingLeft: "10px" }}>
             <div style={{ width: '100%', display: 'flex' }}>
@@ -54,8 +68,8 @@ const Team = () => {
           </div>
         </div>
       </div>
-      <div style={{ width: "70%", height: "100vh", overflow: "hidden", overflowY: "scroll", }} ref={secondDivRef}>
-        <div style={{ backgroundColor: "black", minHeight: "100vh" }}>
+      <div style={{ width: display? "70%" : "100%", height: "100vh", overflow: "hidden", overflowY: "scroll", }} ref={secondDivRef}>
+        <div style={{ backgroundColor: "black", minHeight: "100vh"}}>
           <p
             style={{
               color: "#ffd38c",
