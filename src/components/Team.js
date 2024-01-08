@@ -39,13 +39,13 @@ const Team = () => {
 
   return (
     <div style={{ width: "100%", height: "100vh", display: "flex", backgroundColor: "black", }}>
-      <div style={{ width: "30%", height: "60%", backgroundColor: "black", alignItems: "center", justifyContent: "center", borderRight: "1px solid #ffd38c", marginTop: "10vw", display: display ? "flex" : "none" }}>
+      <div style={{ width: "25%", height: "60%", backgroundColor: "black", alignItems: "center", justifyContent: "center", borderRight: "1px solid #ffd38c", marginTop: "10vw", display: display ? "flex" : "none" }}>
         <div style={{ width: '100%', height: '80%', display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: "5vw", }}>
           <div style={{ width: '95%', height: '60%', paddingLeft: "10px" }}>
             <div style={{ width: '100%', display: 'flex' }}>
               <div style={(sel === "SECRETARIES") ? { width: '1%', backgroundColor: 'orange', marginRight: '1rem', borderTopRightRadius: '0.5rem', borderTopLeftRadius: '0.5rem', transition: "all    cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s" } : { width: '1%', backgroundColor: 'gray', marginRight: '1rem', borderTopRightRadius: '0.5rem', borderTopLeftRadius: '0.5rem', transition: "all  cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s" }}>
               </div>
-              <h1 style={(sel === "SECRETARIES") ? { width: '90%', fontSize: '3vw', color: 'white', fontWeight: 'bold', textTransform: 'capitalize', transition: "all  cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s" } : { width: '90%', fontSize: '3vw', color: 'gray', fontWeight: 'bold', textTransform: 'capitalize', transition: "all  cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s" }}
+              <h1 style={(sel === "SECRETARIES") ? { width: '90%', fontSize: '2.5vw', color: 'white', fontWeight: 'bold', textTransform: 'capitalize', transition: "all  cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s" } : { width: '90%', fontSize: '2.5vw', color: 'gray', fontWeight: 'bold', textTransform: 'capitalize', transition: "all  cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s" }}
                 onClick={() => handleItemClick("SECRETARIES")}
               >
                 SECRETARIES
@@ -53,22 +53,22 @@ const Team = () => {
             </div>
             <div style={{ width: '100%', display: 'flex' }}>
               <div style={(sel === "COORDINATORS") ? { width: '1%', backgroundColor: 'orange', marginRight: '1rem', borderTopRightRadius: '0.5rem', borderTopLeftRadius: '0.5rem', transition: "all  cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s" } : { width: '1%', backgroundColor: 'gray', marginRight: '1rem', borderTopRightRadius: '0.5rem', borderTopLeftRadius: '0.5rem', transition: "all  cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s" }}></div>
-              <h1 style={(sel === "COORDINATORS") ? { width: '90%', fontSize: '3vw', color: 'white', fontWeight: 'bold', textTransform: 'capitalize', transition: "all  cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s" } : { width: '90%', fontSize: '3vw', color: 'gray', fontWeight: 'bold', textTransform: 'capitalize', transition: "all  cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s" }} onClick={() => handleItemClick("COORDINATORS")}>COORDINATORS</h1>
+              <h1 style={(sel === "COORDINATORS") ? { width: '90%', fontSize: '2.5vw', color: 'white', fontWeight: 'bold', textTransform: 'capitalize', transition: "all  cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s" } : { width: '90%', fontSize: '2.5vw', color: 'gray', fontWeight: 'bold', textTransform: 'capitalize', transition: "all  cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s" }} onClick={() => handleItemClick("COORDINATORS")}>COORDINATORS</h1>
             </div>
             <div style={{ width: '100%', display: 'flex' }}>
               <div style={(sel === "DEVELOPERS") ? { width: '1%', backgroundColor: 'orange', marginRight: '1rem', borderTopRightRadius: '0.5rem', borderTopLeftRadius: '0.5rem', transition: "all  cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s" } : { width: '1%', backgroundColor: 'gray', marginRight: '1rem', borderTopRightRadius: '0.5rem', borderTopLeftRadius: '0.5rem', transition: "all  cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s" }}></div>
-              <h1 style={(sel === "DEVELOPERS") ? { width: '90%', fontSize: '3vw', color: 'white', fontWeight: 'bold', textTransform: 'capitalize', transition: "all  cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s" } : { width: '90%', fontSize: '3vw', color: 'gray', fontWeight: 'bold', textTransform: 'capitalize', transition: "all  cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s" }} onClick={() => handleItemClick("DEVELOPERS")}
+              <h1 style={(sel === "DEVELOPERS") ? { width: '90%', fontSize: '2.5vw', color: 'white', fontWeight: 'bold', textTransform: 'capitalize', transition: "all  cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s" } : { width: '90%', fontSize: '2.5vw', color: 'gray', fontWeight: 'bold', textTransform: 'capitalize', transition: "all  cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s" }} onClick={() => handleItemClick("DEVELOPERS")}
               >DEVELOPERS
               </h1>
             </div>
             <div style={{ width: '100%', display: 'flex' }}>
               <div style={(sel === "HEADS") ? { width: '1%', backgroundColor: 'orange', marginRight: '1rem', borderTopRightRadius: '0.5rem', borderTopLeftRadius: '0.5rem', transition: "all  cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s" } : { width: '1%', backgroundColor: 'gray', marginRight: '1rem', borderTopRightRadius: '0.5rem', borderTopLeftRadius: '0.5rem', transition: "all  cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s" }}></div>
-              <h1 style={(sel === "HEADS") ? { width: '90%', fontSize: '3vw', color: 'white', fontWeight: 'bold', textTransform: 'capitalize', transition: "all  cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s" } : { width: '90%', fontSize: '3vw', color: 'gray', fontWeight: 'bold', textTransform: 'capitalize', transition: "all  cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s" }} onClick={() => handleItemClick("HEADS")}>HEADS</h1>
+              <h1 style={(sel === "HEADS") ? { width: '90%', fontSize: '2.5vw', color: 'white', fontWeight: 'bold', textTransform: 'capitalize', transition: "all  cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s" } : { width: '90%', fontSize: '2.5vw', color: 'gray', fontWeight: 'bold', textTransform: 'capitalize', transition: "all  cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s" }} onClick={() => handleItemClick("HEADS")}>HEADS</h1>
             </div>
           </div>
         </div>
       </div>
-      <div style={{ width: display? "70%" : "100%", height: "100vh", overflow: "hidden", overflowY: "scroll", }} ref={secondDivRef}>
+      <div style={{ width: display? "75%" : "100%", height: "100vh", overflow: "hidden", overflowY: "scroll", }} ref={secondDivRef}>
         <div style={{ backgroundColor: "black", minHeight: "100vh"}}>
           <p
             style={{
