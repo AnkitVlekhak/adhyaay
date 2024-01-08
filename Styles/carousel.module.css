@@ -1,0 +1,49 @@
+.team_card {
+    overflow: hidden;
+    transition: all cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s;
+    border: 2px solid #ffd38c;
+    filter: blur(2px) grayscale(80%);
+}
+
+.team_card:hover {
+    background-color: blue;
+    scale: 1.01;
+    filter: blur(0) grayscale(0%);
+}
+
+.team_name {
+    display: none;
+    opacity: 0;
+    transition: all cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.8s;
+}
+
+.team_card:hover .team_name {
+    display: flex;
+    opacity: 1;
+}
+
+.team_card:hover .team_box {
+    height: 35%;
+}
+
+.team_box {
+    height: 0;
+    transition: all cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s;
+}
+
+@media screen and (max-width: 768px) {
+    .team_card {
+        overflow: hidden;
+        transition: all cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s;
+        border: 2px solid #ffd38c;
+        filter: blur(0) grayscale(0);
+    }
+
+    .team_name {
+        display: flex;
+        opacity: 1;
+    }
+    .team_box{
+        height: 35%;
+    }
+}
