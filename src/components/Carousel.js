@@ -3,6 +3,7 @@ import { Typography } from "@mui/material";
 import { Link } from "react-router-dom";
 import insta from "../assets/insta.png";
 import linkedin from "../assets/linkedin.png";
+import styles from "../Styles/carousel.module.css";
 
 const Carousel = ({ arr }) => {
   return (
@@ -28,6 +29,7 @@ const Carousel = ({ arr }) => {
             backgroundPosition: "center",
             borderRadius: 36,
           }}
+          className={styles.team_card}
         >
           <div
             style={{
@@ -43,6 +45,7 @@ const Carousel = ({ arr }) => {
               paddingTop: 20,
               paddingBottom: 20,
             }}
+            className={styles.team_box}
           >
             <Typography
               variant="h6"
@@ -52,6 +55,7 @@ const Carousel = ({ arr }) => {
                 fontWeight: "500",
                 textTransform: "capitalize",
               }}
+              className={styles.team_name}
             >
               {profile.Designation}
             </Typography>
@@ -63,10 +67,11 @@ const Carousel = ({ arr }) => {
                 textTransform: "uppercase",
                 fontWeight: "bold",
               }}
+              className={styles.team_name}
             >
               {profile["Name:"]}
             </Typography>
-            <div className="flex items-center gap-x-5 mt-3">
+            <div className={`flex items-center gap-x-5 mt-3 ${styles.team_name}`}>
               <Link to={profile["Instagram :"]}>
                 <img src={insta} width={30} />
               </Link>
