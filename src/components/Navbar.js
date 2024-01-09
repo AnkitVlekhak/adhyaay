@@ -60,7 +60,9 @@ const Navbar = ({ name }) => {
       <ToastContainer />
       {matches && (
         <div className="flex items-center px-2 justify-between absolute min-w-full z-10">
-          <img src={logo} width={300} className="mt-2" />
+          <Link to={navItems[0].link}>
+            <img src={logo} width={300} className="mt-2 cursor-pointer" />
+          </Link>
           <div className="flex items-center">
             {navItems.map((items) => (
               <>
@@ -134,7 +136,9 @@ const Navbar = ({ name }) => {
                   marginTop: "10px",
                 }}
               />
-              <img src={logo} className="w-64 mt-3" />
+              <Link to={navItems[0].link}>
+                <img src={logo} className="w-64 mt-3 cursor-pointer" />
+              </Link>
             </div>
           </div>
           {openDrawer && (
@@ -143,7 +147,12 @@ const Navbar = ({ name }) => {
               style={{ zIndex: 1 }}
             >
               <div className="z-12 absolute left-[8px] top-[0px]">
-                <MenuIcon
+               {openDrawer ? <ClearIcon onClick={handleDrawer} style={{
+                  color: "white",
+                  height: "50px",
+                  width: "50px",
+                  marginTop: "10px",
+                }} /> : <MenuIcon
                   onClick={handleDrawer}
                   style={{
                     color: "white",
@@ -151,7 +160,7 @@ const Navbar = ({ name }) => {
                     width: "50px",
                     marginTop: "10px",
                   }}
-                />
+                />}
               </div>
               {navItems.map((items) => (
                 <>
