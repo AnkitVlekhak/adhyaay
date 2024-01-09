@@ -12,7 +12,6 @@ import Login from "./components/Login";
 import Register from "./components/Register";
 import Sponsors from "./components/Sponsors";
 import Success from "./components/Success";
-import Whatapp from "./assets/icons8-whatsapp.svg";
 import { useState } from "react";
 import RegisteredEvents from "./components/RegisteredEvents";
 const App = () => {
@@ -20,14 +19,6 @@ const App = () => {
   return (
     <BrowserRouter>
       <Navbar name={name} />
-      <a href="https://api.whatsapp.com/send?phone=919682843175" target="blank">
-        <img
-          src={Whatapp}
-          alt="whatapp"
-          srcset=""
-          className="fixed bottom-[20px] right-[20px] w-[60px]"
-        />
-      </a>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
