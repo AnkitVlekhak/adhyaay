@@ -55,7 +55,6 @@ const Carousel = ({ arr }) => {
                 fontWeight: "500",
                 textTransform: "capitalize",
               }}
-              className={styles.team_name}
             >
               {profile.Designation}
             </Typography>
@@ -67,7 +66,6 @@ const Carousel = ({ arr }) => {
                 textTransform: "uppercase",
                 fontWeight: "bold",
               }}
-              className={styles.team_name}
             >
               {profile["Name:"]}
             </Typography>
