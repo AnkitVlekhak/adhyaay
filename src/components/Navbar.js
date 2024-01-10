@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import logo from "../assets/adhyaay.jpeg";
 import { Link } from "react-router-dom";
 import MenuIcon from "@mui/icons-material/Menu";
+import ClearIcon from '@mui/icons-material/Clear';
 import { HashLink } from "react-router-hash-link";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
