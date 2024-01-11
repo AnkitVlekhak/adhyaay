@@ -8,6 +8,7 @@ const EventDetail = () => {
 
   return (
     <div
+      className="p-10"
       style={{
         backgroundColor: "black",
         backgroundPosition: "center",
@@ -16,21 +17,20 @@ const EventDetail = () => {
         overflowY: "hidden",
         display: "flex",
         justifyContent: "center",
-        alignItems: "center",
-        flexDirection: "column",
       }}
     >
-      <img src={img} className="eventImg pt-20" />
-      <h1 style={{ color: "#f9fd50", marginTop: 20 }}>{name}</h1>
+    <img src={img} className="eventImg pt-20" />
+    <div className="w-2/3 pt-[6vw] flex flex-col items-center">
+      <h1 style={{ color: "#dbba89", marginTop: 20 }}>{name}</h1>
       <p
+        className="text-2xl text-[#dbba89] mt-10 w-[85%]"
         style={{
-          color: "#f9fd50",
-          fontSize: "20px",
           padding: 30,
         }}
       >
         {des}
       </p>
+    </div>      
     </div>
   );
 };
