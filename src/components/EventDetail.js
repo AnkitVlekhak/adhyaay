@@ -8,7 +8,7 @@ const EventDetail = () => {
 
   return (
     <div
-      className="p-10"
+      className="p-10 flex-col lg:flex-row items-center lg:items-start"
       style={{
         backgroundColor: "black",
         backgroundPosition: "center",
@@ -19,13 +19,13 @@ const EventDetail = () => {
         justifyContent: "center",
       }}
     >
-    <img src={img} className="eventImg pt-20 w-1/3" />
-    <div className="w-2/3 pt-[6vw] flex flex-col items-center">
-      <h1 style={{ color: "#dbba89", marginTop: 20 }} className="text-center text-6xl font-semibold font-serif tracking-wide">{name}</h1>
+    <img src={img} className="eventImg pt-20 w-2/3 lg:w-1/3 " />
+    <div className="w-[95%] lg:w-2/3 pt-[6vw] flex flex-col items-center ">
+      <h1 style={{ color: "#dbba89", marginTop: 20 }} className="text-center text-4xl lg:text-6xl font-semibold font-serif tracking-wide">{name}</h1>
       <p
-        className="text-2xl text-[#dbba89] mt-10 w-[85%]"
+        className="text-lg lg:text-2xl p-2 pt-4 lg:p-[30px] text-[#dbba89] lg:mt-10 w-full lg:w-[85%]"
         style={{
-          padding: 30,
+          // padding: 30,
         }}
       >
         {des}
