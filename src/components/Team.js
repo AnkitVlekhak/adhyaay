@@ -71,65 +71,69 @@ const Team = () => {
       <div className={style.left} style={{ width: display? "75%" : "100%", height: "100vh", overflow: "hidden", overflowY: "scroll",}} ref={secondDivRef}>
         <div style={{ backgroundColor: "black", minHeight: "100vh"}}>
           <p
+            className="text-4xl md:text-[3.5rem]"
             style={{
               color: "#ffd38c",
               textAlign: "center",
               paddingTop: 100,
               paddingBottom: 20,
               textTransform: "uppercase",
-              fontSize: "3.5rem",
+              // fontSize: "3.5rem",
               fontWeight: "bold",
             }}
 
           >
             Secretaries
           </p>
-          <div style={{ paddingBottom: 30, paddingLeft: 30 }}>
+          <div className="mr-auto ml-auto" style={{ paddingBottom: 30, }}>
             <Carousel arr={og} />
           </div>
           <p
+            className="text-4xl md:text-[3.5rem]"
             style={{
               color: "#ffd38c",
               textAlign: "center",
               paddingBottom: 20,
               textTransform: "uppercase",
-              fontSize: "3.5rem",
+              // fontSize: "3.5rem",
               fontWeight: "bold",
             }}
           >
             Fest Coordinators
           </p>
-          <div style={{ paddingBottom: 30, paddingLeft: 30 }}>
+          <div className="mr-auto ml-auto" style={{ paddingBottom: 30, }}>
             <Carousel arr={ofc} />
           </div>
           <p
+            className="text-4xl md:text-[3.5rem]"
             style={{
               color: "#ffd38c",
               textAlign: "center",
               paddingBottom: 20,
               textTransform: "uppercase",
-              fontSize: "3.5rem",
+              // fontSize: "3.5rem",
               fontWeight: "bold",
             }}
           >
             Developers
           </p>
-          <div style={{ paddingBottom: 30, paddingLeft: 30 }}>
+          <div className="mr-auto ml-auto" style={{ paddingBottom: 30, }}>
             <Carousel arr={Developers} />
           </div>
           <p
+            className="text-4xl md:text-[3.5rem]"
             style={{
               color: "#ffd38c",
               textAlign: "center",
               paddingBottom: 20,
               textTransform: "uppercase",
-              fontSize: "3.5rem",
+              // fontSize: "3.5rem",
               fontWeight: "bold",
             }}
           >
             Heads
           </p>
-          <div style={{ paddingBottom: 30, paddingLeft: 30 }}>
+          <div className="mr-auto ml-auto" style={{ paddingBottom: 30, }}>
             <Carousel arr={heads} />
           </div>
         </div>
