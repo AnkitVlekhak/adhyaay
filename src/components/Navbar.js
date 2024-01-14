@@ -148,7 +148,12 @@ const Navbar = ({ name }) => {
               style={{ zIndex: 1 }}
             >
               <div className="z-12 absolute left-[8px] top-[0px]">
-                <MenuIcon
+                {openDrawer ? <ClearIcon onClick={handleDrawer} style={{
+                  color: "white",
+                  height: "50px",
+                  width: "50px",
+                  marginTop: "10px",
+                }} /> : <MenuIcon
                   onClick={handleDrawer}
                   style={{
                     color: "white",
