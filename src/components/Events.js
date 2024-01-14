@@ -15,12 +15,13 @@ import guess from "../assets/guess.jpg";
 import talent from "../assets/talent.jpg";
 import soda from "../assets/soda.jpg";
 import enginner from "../assets/enginner.jpg";
-import foodz from "../assets/foodz.jpg";
-import high from "../assets/high.jpg";
-import gothic from "../assets/gothic.jpg";
-import adhyaayp from "../assets/adhyaayp.jpg";
+
+import AOS from 'aos';
+import React,{useEffect} from "react";
+import 'aos/dist/aos.css'; 
 
 const events = [
+  
   {
     name: "Voice of HBTU",
     des: "Calling all musical mavens, lyrical legends, and vocal virtuosos - HBTU's annual cultural fest, Adhyaay, is proud to present The Voice of HBTU, the ultimate musical competition of the year! As the legendary Bob Marley once said, One good thing about music, when it hits you, you feel no pain.And that's exactly what we're aiming for - to make you feel the rhythm, to move your body and your soul, and to create an unforgettable experience that you'll cherish for years to come.So, whether you're into pop, rock, R&B, or any other genre, we invite you to join us and show the world what you've got. The Voice of HBTU is not just a competition - it's a celebration of music, creativity, and the power of the human voice. Are you ready to raise the roof and make some noise? Then come and join us at Adhyaay, and let your voice be heard!",
@@ -85,10 +86,15 @@ const events = [
 ];
 
 const Events = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, 
+    });
+  }, []);
   return (
     <div
       style={{
-        backgroundColor: "black",
+        background: "linear-gradient(to bottom right, black, purple)",
         objectFit: "scale-down",
         // minHeight: "100vh",
         // overflowY: "hidden",

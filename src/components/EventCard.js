@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 
 const EventCard = ({ name, des, img, id }) => {
   return (
+    
     <Link
       style={{
         textDecoration: "none",

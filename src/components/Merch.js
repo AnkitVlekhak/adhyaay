@@ -2,7 +2,15 @@
 
 import Card from "./Card";
 import "./Merch.scss";
+import AOS from 'aos';
+import React,{useEffect} from "react";
+import 'aos/dist/aos.css'; 
 const Merch = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, 
+    });
+  }, []);
 
   
     const cardsData = [
@@ -30,7 +38,7 @@ const Merch = () => {
         
       }}
     >
-     <div className="t-box"> {cardsData.map((data, index) => (
+     <div className="t-box"  data-aos="fade-up"> {cardsData.map((data, index) => (
       <Card key={index} name={data.name} detail={data.detail} />
     ))}</div>
     </div>
