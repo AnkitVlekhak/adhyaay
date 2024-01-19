@@ -2,8 +2,17 @@ import { useEffect, useRef, useState } from "react";
 import Carousel from "./Carousel";
 import { Developers, heads, ofc, og } from "./TeamAdhyaay";
 import style from "../Styles/team.module.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import React from "react";
+
 
 const Team = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, 
+    });
+  }, []);
 
   const [display, setDisplay] = useState(window.innerWidth > 768);
   const [sel, setSel] = useState("SECRETARIES");
@@ -43,9 +52,9 @@ const Team = () => {
         <div style={{ width: '100%', height: '80%', display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: "5vw", }}>
           <div style={{ width: '95%', height: '60%', paddingLeft: "10px" }}>
             <div style={{ width: '100%', display: 'flex' }}>
-              <div style={(sel === "SECRETARIES") ? { width: '1%', backgroundColor: 'orange', marginRight: '1rem', borderTopRightRadius: '0.5rem', borderTopLeftRadius: '0.5rem', transition: "all    cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s" } : { width: '1%', backgroundColor: 'gray', marginRight: '1rem', borderTopRightRadius: '0.5rem', borderTopLeftRadius: '0.5rem', transition: "all  cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s" }}>
+              <div className="fadestylecss"style={(sel === "SECRETARIES") ? { width: '1%', backgroundColor: 'orange', marginRight: '1rem', borderTopRightRadius: '0.5rem', borderTopLeftRadius: '0.5rem', transition: "all    cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s" } : { width: '1%', backgroundColor: 'gray', marginRight: '1rem', borderTopRightRadius: '0.5rem', borderTopLeftRadius: '0.5rem', transition: "all  cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s" }}>
               </div>
-              <h1 style={(sel === "SECRETARIES") ? { width: '90%', fontSize: '2.5vw', color: 'white', fontWeight: 'bold', textTransform: 'capitalize', transition: "all  cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s" } : { width: '90%', fontSize: '2.5vw', color: 'gray', fontWeight: 'bold', textTransform: 'capitalize', transition: "all  cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s" }}
+              <h1   style={(sel === "SECRETARIES") ? { width: '90%', fontSize: '2.5vw', color: 'white', fontWeight: 'bold', textTransform: 'capitalize', transition: "all  cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s" } : { width: '90%', fontSize: '2.5vw', color: 'gray', fontWeight: 'bold', textTransform: 'capitalize', transition: "all  cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s" }}
                 onClick={() => handleItemClick("SECRETARIES")}
               >
                 SECRETARIES

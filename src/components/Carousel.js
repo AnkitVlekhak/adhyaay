@@ -4,10 +4,15 @@ import { Link } from "react-router-dom";
 import insta from "../assets/insta.png";
 import linkedin from "../assets/linkedin.png";
 import styles from "../Styles/carousel.module.css";
+import indman from "../assets/man.jpg";
 
 const Carousel = ({ arr }) => {
+
+
+  
   return (
     <div
+    
       className="team"
       style={{
         display: "flex",
@@ -20,7 +25,8 @@ const Carousel = ({ arr }) => {
         <div  
           key={i}
           style={{
-            backgroundImage: `url('${profile.Photo}')`,
+            backgroundImage: `url(${indman})`,
+
             width: 300,
             height: 400,
             margin: 30,
@@ -30,6 +36,7 @@ const Carousel = ({ arr }) => {
             borderRadius: 36,
           }}
           className={styles.team_card}
+          
         >
           <div
             style={{
@@ -46,6 +53,7 @@ const Carousel = ({ arr }) => {
               paddingBottom: 20,
             }}
             className={styles.team_box}
+            
           >
             <Typography
               variant="h6"
